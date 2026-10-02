@@ -1,0 +1,222 @@
+/* Claude Night — warm, quiet dark theme for Typora */
+:root {
+  --bg-color: #191816;
+  --text-color: #e8e2d8;
+  --md-char-color: #777269;
+  --meta-content-color: #c8a98b;
+  --primary-color: #d9855b;
+  --primary-btn-border-color: #b96a46;
+  --primary-btn-text-color: #fffaf5;
+  --window-border: 1px solid #34312d;
+  --active-file-bg-color: #302b27;
+  --active-file-text-color: #f2e6d9;
+  --active-file-border-color: #d9855b;
+  --side-bar-bg-color: #211f1c;
+  --control-text-color: #b5aea4;
+  --rawblock-edit-panel-bd: #282521;
+  --item-hover-bg-color: #302c28;
+  --item-hover-text-color: #f1e9df;
+  --monospace: "Cascadia Code", "Consolas", monospace;
+}
+
+html {
+  font-size: 18px;
+  background: #191816;
+  color: #e8e2d8;
+  font-family: Georgia, "Cambria", "Songti SC", "SimSun", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #191816;
+  color: #e8e2d8;
+  font-family: Georgia, "Cambria", "Songti SC", "SimSun", serif;
+  line-height: 1.72;
+}
+
+#write {
+  max-width: 820px;
+  padding: 42px 30px 80px;
+  color: #e8e2d8;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+#write p { margin: 0.8rem 0; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6 {
+  color: #f2ece3;
+  font-family: Georgia, "Cambria", "Songti SC", "SimSun", serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.8em;
+  margin-bottom: 0.65em;
+}
+#write h1, #write h2, #write h3, #write h4, #write h5 {
+  color: #e7b08f;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+#write h1 { font-size: 1.94rem; }
+#write h2 { font-size: 1.67rem; }
+#write h3 { font-size: 1.4rem; }
+#write h4 { font-size: 1.21rem; }
+#write h5 { font-size: 1.08rem; }
+
+#write a { color: #e39a71; text-decoration: underline; text-decoration-color: #815b47; text-underline-offset: 3px; }
+#write a:hover { color: #f2b894; }
+#write strong { color: #f1e8dd; font-weight: 700; }
+#write em { color: #d8c5b5; }
+#write mark { color: #f5eadd; background: #624531; padding: 0.08em 0.25em; border-radius: 3px; }
+#write del { color: #958b80; }
+
+#write blockquote {
+  margin: 1.25em 0;
+  padding: 0.15em 1.1em;
+  color: #c8beb2;
+  border-left: 3px solid #c77c55;
+  background: #211f1c;
+  border-radius: 0 5px 5px 0;
+}
+#write blockquote p { margin: 0.65em 0; }
+
+#write ul, #write ol { padding-left: 1.55em; }
+#write li { margin: 0.28em 0; }
+#write li::marker { color: #d28a62; }
+#write input[type="checkbox"] { accent-color: #c77c55; }
+
+#write code, #write pre, .CodeMirror, .CodeMirror pre {
+  font-family: "Cascadia Code", "Consolas", monospace;
+}
+#write code {
+  color: #e9b18e;
+  background: #292622;
+  padding: 0.12em 0.38em;
+  border-radius: 4px;
+  font-size: 0.94em;
+}
+#write pre.md-fences, #write .md-fences {
+  background: #211f1c;
+  border: 1px solid #393530;
+  border-radius: 8px;
+  padding: 1em 1.15em;
+  color: #ded7cd;
+}
+#write pre.md-fences code { background: transparent; color: inherit; padding: 0; }
+
+/* High-contrast syntax colors for Typora's CodeMirror code fences */
+#write .cm-s-inner, #write .cm-s-inner.CodeMirror, #write .cm-s-inner .CodeMirror-line { color: #eee8df; }
+#write .cm-s-inner .cm-keyword,
+#write .cm-s-inner .cm-operator,
+#write .cm-s-inner .cm-tag { color: #ff9b79; }
+#write .cm-s-inner .cm-def,
+#write .cm-s-inner .cm-variable-2,
+#write .cm-s-inner .cm-property,
+#write .cm-s-inner .cm-builtin { color: #82cfff; }
+#write .cm-s-inner .cm-variable,
+#write .cm-s-inner .cm-attribute { color: #f3d17b; }
+#write .cm-s-inner .cm-string,
+#write .cm-s-inner .cm-string-2,
+#write .cm-s-inner .cm-qualifier { color: #a8dc8b; }
+#write .cm-s-inner .cm-number,
+#write .cm-s-inner .cm-atom { color: #d5a6ff; }
+#write .cm-s-inner .cm-comment,
+#write .cm-s-inner .cm-meta { color: #aaa39a; font-style: italic; }
+#write .cm-s-inner .cm-builtin { font-weight: 600; }
+#write .cm-s-inner .cm-error { color: #fff !important; background: #9c3434; }
+
+#write table { border-collapse: collapse; margin: 1.4em 0; width: 100%; }
+#write th, #write td { border: 1px solid #454039; padding: 0.55em 0.75em; }
+#write th { background: #292622; color: #f0e6da; font-weight: 600; }
+#write tr:nth-child(even) { background: #201e1b; }
+#write hr { border: 0; border-top: 1px solid #49433c; margin: 2.4em 0; }
+#write img { border-radius: 6px; }
+#write .md-toc { color: #c8beb2; }
+#write .md-toc a { color: #d99873; }
+
+#write .md-meta, #write .md-content { color: #827a70; }
+#write .md-tag { color: #d28a62; }
+
+#typora-sidebar {
+  background: #211f1c;
+  border-right: 1px solid #34312d;
+}
+.file-list-item, .outline-item { color: #c8c0b6; }
+.file-list-item:hover, .outline-item:hover { background: #302c28; }
+#typora-sidebar .active, .file-list-item.active { color: #f2e6d9; background: #302b27; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #514a41; border: 2px solid #191816; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #6b6054; }
+
+@media print {
+  html, body, #write { background: #fff !important; color: #222 !important; }
+  #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { color: #222 !important; }
+  #write a { color: #74422c !important; }
+  #write pre.md-fences, #write blockquote { background: #f5f2ee !important; color: #222 !important; }
+}
+
+
+/* Match Typora's CodeMirror selection classes to the prose selection */
+::selection, html ::selection, html *::selection {
+  color: #fffaf2 !important;
+  background: #965a3b !important;
+  -webkit-text-fill-color: #fffaf2 !important;
+}
+/* The selected text span gets the color; the CodeMirror line overlay stays clear */
+.cm-s-inner .CodeMirror-selectedtext {
+  color: #fffaf2 !important;
+  background: #965a3b !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #fffaf2 !important;
+}
+.cm-s-inner div.CodeMirror-selected,
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: transparent !important;
+}
+
+
+/* Math block editor and preview */
+.md-rawblock-input,
+.md-mathblock-input,
+.md-mathblock-panel,
+.md-mathjax-preview {
+  color: #e8e2d8;
+  background-color: #282521;
+  border-color: #49433c;
+}
+.md-mathblock-input {
+  font-family: "Cascadia Code", "Consolas", monospace;
+  line-height: 1.65;
+  caret-color: #e7a17b;
+}
+.md-mathjax-preview {
+  color: #e8e2d8;
+}
+
+
+/* Use one visible insertion-caret color in code and formula editors */
+.cm-s-inner div.CodeMirror-cursor,
+.cm-s-inner div.CodeMirror-cursor div {
+  border-left: 2px solid #f0a078 !important;
+}
+.md-mathblock-input {
+  caret-color: #f0a078 !important;
+}
+
+/* YAML front matter */
+#write pre.md-meta-block {
+  color: #e2d9ce;
+  background: #24221f;
+  border: 1px solid #403a34;
+  border-left: 3px solid #c77c55;
+  border-radius: 7px;
+  padding: 14px 18px;
+  font-family: "Cascadia Code", "Consolas", monospace;
+  font-size: 0.88em;
+  line-height: 1.7;
+}
+#write pre.md-meta-block .md-meta {
+  color: #b39a86;
+}
